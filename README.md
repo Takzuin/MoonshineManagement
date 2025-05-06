@@ -83,6 +83,26 @@ npm install
 npm run dev
 ```
 
+Si encuentras un error de PowerShell relacionado con la ejecución de scripts deshabilitada cuando ejecutas `npm install`, sigue estos pasos:
+
+1. Abre PowerShell como Administrador (clic derecho en PowerShell y selecciona "Ejecutar como administrador")
+
+2. Ejecuta uno de estos comandos para cambiar la política de ejecución:
+
+   ```powershell
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+   ```
+
+   O para una configuración más permisiva:
+
+   ```powershell
+   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+   ```
+
+3. Confirma el cambio escribiendo "Y" cuando se te solicite
+
+4. Intenta ejecutar `npm install` nuevamente en el directorio de tu proyecto
+
 ### 8. Iniciar el servidor
 
 ```bash
